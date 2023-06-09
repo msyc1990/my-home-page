@@ -29,7 +29,7 @@ img {
 .nowrap {
     white-space: nowrap;
 }
-.home, .main, .projects{
+.home, .main, .projects, .contact{
     min-height: 100vh;
 }
 /*Nawigation*/
