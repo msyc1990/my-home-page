@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+/*Reset*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+/*Colors*/
+:root {
+    --White: #fff;
+    --Dark: #1d1d1d;
+    --LowDark: #292F33;
+    --Inkwell: #363945;
+    --Blue: #4682b4;
+}
+/*CSS Web*/
+body {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+.home, .main, .projects{
+    min-height: 100vh;
+}
+/*Nawigation*/
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: var(--Dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 6px  var(--Inkwell);
+}
+
+.logo {
+    padding-left: 1rem;
+}
+
+.logo p {
+    font-size: 3.5rem;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+}
+
+.logo p span {
+    font-size: 1.5rem;
+    color: var(--Blue);
+    font-weight: bolder;
+}
+
+.menu {
+    width: 75%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--White);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    padding-bottom: .2rem;
+}
+
+.menu li:hover {
+    color: var(--Blue);
+    transition: .3s all ease-in-out;
+}
+/*Menu-Icon*/
+.menu-icon {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+.line {
+    width: 3em;
+    height: .3em;
+    background-color: white;
+    margin: .7em;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+
+@media only screen and (max-width: 1000px) {
+    .menu-icon {
+        display: block;
+        transition: .3s ease-in-out;
+    }
+
+    .menu-icon.active .line:first-child {
+        transform: translateY(-300px);
+    }
+
+    .menu-icon.active .line:nth-child(2) {
+        transform: rotate(-405deg) translateY(8px);
+    }
+
+    .menu-icon.active .line:nth-child(3) {
+        transform: rotate(-320deg) translateY(-10px);
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: #1d1d1deb;
+        height: 92vh;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        transform: translate(100%);
+        transition: .3s ease-in-out;
+        z-index: 1;
+    }
+
+    .menu.active {
+        transform: translate(0%);
+    }
+}
+/*Home*/
+.home-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.home-title h1 {
+    font-size: 2.7rem;
+    letter-spacing: .1rem;
+    border-bottom: 1px solid #1d1d1d2f;
+    padding-bottom: .3rem;
+}
+
+.home-title span {
+    font-size: 1.5rem;
+    padding-top: .3rem;
+}
+
+.home-icon {
+    width: max-content;
+    background-color: var(--Dark);
+    display: flex;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+}
+
+.scroll-down-button {
+    width: 1.5rem;
+    height: 5rem;
+    margin: 1.5rem auto;
+    display: block;
+    border-radius: 1rem;
+    border: 0.2rem solid #1d1d1d;
+    background: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+  
+.scroll-down-circle {
+    height: 1rem;
+    width: 1rem;
+    background: #1d1d1d;
+    border-radius: 50%;
+    animation: circleJump 1s infinite alternate-reverse;
+}
+  
+  @keyframes circleJump {
+    from {
+      transform: translateY(0%);
+    }
+  
+    to {
+      transform: translateY(-100%);
+    }
+  }
+
+@media only screen and (min-width: 800px) {
+    .home-title h1 {
+        font-size: 3.4rem;
+    }
+    
+    .home-title span {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .scroll-down-button {
+        display: none;
+    }
+
+    .home {
+        height: 92vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .home-img {
+        flex: 1;
+    }
+
+    .home-title {
+        flex: 1;
+    }
+
+    .menu li:hover {
+        color: var(--White);
+        position: relative;
+    }
+
+    .menu li::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        background-color: var(--Blue);
+        height: .15em;
+        border-radius: 10px;
+        transition: .3s ease-in-out;
+    }
+    .menu li:hover::after {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .home-title h1 {
+        font-size: 3.8rem;
+    }
+    
+    .home-title span {
+        font-size: 2rem;
+    }
+}
+/*About*/
+.dec-title {
+    color: whitesmoke;
+    background-color: #1d1d1d;
+    padding: .3rem .7rem;
+    border-top-left-radius: .5rem;
+}
+
+.main, .projects {
+    max-width: 1280px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.main h1, .projects h1, .contact h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-card {
+    max-width: 375px;
+    margin: 1rem auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.img-card-text {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .7rem;
+    background-color:var(--Dark);
+}
+
+.img-card-text span {
+    font-weight: bold;
+}
+
+.about-content, .technology {
+    border-radius: .4rem;
+    padding: .7rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.about-content h2, .technology h2 {
+    font-size: 1.8rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--LowDark);
+}
+
+.about-content p {
+    color: var(--Inkwell);
+    font-size: 1.3rem;
+    padding: .5rem;
+    text-align: justify;
+}
+.quote-box {
+    height: 200px;
+    background-color: var(--LowDark);
+    border-left: 5px solid var(--Blue);
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    padding: 1rem .5rem;
+}
+p.qoute {
+    color: whitesmoke;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+p.quote-author {
+    font-size: 1.5rem;
+    font-family: cursive;
+    text-align: right;
+    color: whitesmoke;
+}
+
+.technology {
+    margin-top: .5rem;
+}
+
+.tech-content {
+    padding: .5rem;
+}
+
+.tech-content h4 {
+    font-size: 1.3rem;
+}
+
+.tech-content ul {
+    list-style-type: disc;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.tech-content ul li {
+    line-height: 1.6;
+}
+
+@media only screen and (min-width: 768px) {
+    .about {
+        flex-direction: row;
+        gap: .8rem;
+    }
+
+    .img-card, .about-content {
+        flex: 1;
+        margin: 1rem auto;
+    }
+
+    .qoute {
+        text-align: center;
+        width: 75%;
+    }
+
+    .quote-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1060px) {
+    .quote-box {
+        margin-top: 3rem;
+    }
+}
+/*Projects*/
+.project-card {
+    margin: 1rem auto;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+
+.project-info h2 {
+    font-size: 1.5rem;
+}
+
+.project-info a {
+    text-decoration: none;
+    padding: .5rem 1rem;
+    background-color: var(--LowDark);
+    color: whitesmoke;
+    font-size: 1.2rem;
+    border-radius: .8rem;
+
+}
+
+.project-info a:hover {
+    background-color: var(--Blue);
+}
+
+.project-describe p {
+    padding: .5rem;
+    font-size: 1.1rem;
+}
+
+.project-tech h2 {
+    margin: .5rem;
+    font-size: 1.3rem;
+}
+.tech-icon {
+    display: flex;
+}
+
+.tech-icon img {
+    margin: .5rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+/*Contact*/
+.i-phone, .i-email {
+    width: 3rem;
+    height: 3rem;
+}
+
+.phone, .email {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone span {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+.email a {
+    color: var(--Blue);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+.contact {
+    max-width: 940px;
+    height: 82vh;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.contact-info {
+    padding: .7rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-self: center;
+    margin-top: 2rem;
+}
+
+.contact-info p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+/*Footer*/
+footer {
+    background-color: var(--LowDark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: whitesmoke;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stworzę dla Ciebie wyjątkową stronę www! Zatrudnij programistę webowego: JavaScript, HTML, CSS"/>
+	<meta name="keywords" content="zamów, stronę, tworzenie, www, programista, portfolio, javascript, html, css" />
+    <title>Michał Syc-Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/main.js"></script>
+</head>
+<body>
+    <!--Nawigation-->
+    <header>
+        <nav>
+            <div class="logo">
+                <p><<span>Code.</span>></p>
+            </div>
+            <ul class="menu">
+                <li data-key="home" class="menu-link">Home</li>
+                <li data-key="main" class="menu-link">O mnie</li>
+                <li data-key="projects" class="menu-link">Portfolio</li>
+                <li data-key="contact" class="menu-link">Kontakt</li>
+            </ul>
+            <button class="menu-icon">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+        </nav>
+    </header>
+    <!--Home-->
+    <section class="home">
+        <figure class="home-img">
+            <img src="./image/home-img.png" alt="Home-img">
+        </figure>
+        <div class="home-title">
+            <h1>Michał Syc</h1>
+            <span>Frontend Web|Developer</span>
+            <div class="home-icon">
+                <a href="https://github.com/msyc1990/msyc1990" target="_blank"><img src="./image/icon/GithubIcon.svg" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/micha%C5%82-syc-38814b21b/" target="_blank"><img src="./image/icon/linkedin.svg" alt="Linkedin"></a>
+            </div>
+            <button class="scroll-down-button">
+                <div class="scroll-down-circle"></div>
+            </button>
+        </div>
+    </section>
+    <!--About-->
+    <main class="main">
+        <h1><span class="dec-title">Kim</span>jestem</h1>
+        <section class="about">
+            <figure class="img-card">
+                <img src="./image/me-photo.jpg" alt="Me-photo">
+                <figcaption class="img-card-text">
+                    <span>Michał Syc</span>
+                    <p>Web|Developer</p>
+                </figcaption>
+            </figure>
+            <article class="about-content">
+                <h2>Kilka słów o sobie</h2>
+                <p>
+                    Jestem technikiem informatykiem, który obecnie uczy się programowania na stanowisko Frontend Developera. Posiadam podstawową wiedzę w takich technologiach jak <strong>HTML5, CSS, JavaScript</strong> oraz<strong> Responsive Web Design.</strong> Chcę zdobyć doświadczenie w branży oraz dalej rozwijać swoje umiejętności.
+                </p>
+                <p>
+                    W moim portfolio znajdziesz kilka projektów, na których pracowałem, które obejmują wiele różnych technologii webowych. W szczególności specjalizuję się w tworzeniu interaktywnych i responsywnych interfejsów użytkownika, korzystając z <strong>HTML5, CSS, JavaScript</strong>
+                </p>
+                <div class="quote-box">
+                    <p class="qoute"><strong>&rdquo;</strong> Hard work beats talent when talent doesn't work hard <strong>&bdquo;</strong></p>
+                    <p class="quote-author">Tim Notke</p>
+                </div>
+            </article>
+        </section>
+        <section class="technology">
+            <h2>Znajomość technologii</h2>
+            <article class="tech-content">
+                <h4>JavaScript</h4>
+                <ul>
+                    <li>znajomość podstawowych typów danych (np. liczby, łańcuchy znaków, obiekty)</li>
+                    <li>umiejętność tworzenia i manipulowania zmiennymi i obiektami</li>
+                    <li>znajomość struktur kontroli przepływu programu, takich jak instrukcje warunkowe i pętle</li>
+                    <li>umiejętność tworzenia funkcji i wykorzystywania ich w programie</li>
+                </ul>
+            </article>            
+            <article class="tech-content">
+                <h4>HTML-5</h4>
+                <ul>
+                    <li>znajomość podstawowych elementów HTML, takich jak nagłówki, paragrafy, listy i tabele</li>
+                    <li>umiejętność korzystania z formularzy i elementów interaktywnych, takich jak przyciski i linki</li>
+                    <li>znajomość semantycznego znaczenia elementów HTML i umiejętność stosowania ich w celu poprawy dostępności i SEO</li>
+                    <li>umiejętność korzystania z atrybutów, takich jak "class" i "id", do stylizacji i manipulacji elementami HTML</li>
+                    <li>znajomość mechanizmów wstawiania multimediów, takich jak obrazy, audio i wideo, na stronie</li>
+                </ul>
+            </article>            
+            <article class="tech-content">
+                <h4>CSS</h4>
+                <ul>
+                    <li>znajomość selektorów CSS i umiejętność ich stosowania w celu wybierania elementów HTML</li>
+                    <li>umiejętność stosowania różnych typów stylów CSS, takich jak kolor, rozmiar czcionki, marginesy i obramowania</li>
+                    <li>znajomość modelu pudełkowego CSS i umiejętność stosowania go w celu precyzyjnej kontroli układu strony</li>
+                    <li>umiejętność stosowania kaskadowych stylów CSS, takich jak styl strony (style sheet) i styl wewnętrzny (inline style)</li>
+                    <li>znajomość technik responsywnego projektowania stron, takich jak media queries i flexbox, w celu dostosowywania strony do różnych rozmiarów ekranu</li>
+                </ul>
+            </article>            
+        </section>
+    </main>
+    <!--Projects-->
+    <section class="projects">
+        <h1><span class="dec-title">Por</span>tfolio</h1>
+        <div class="projects-container">
+            <article class="project-card">
+                <figure class="project-img">
+                    <img src="/image/projects/art-project.png" alt="Art-Gallery-img">
+                </figure>
+                <div class="project-info">
+                    <h2>Art-Gallery</h2>
+                    <a href="https://github.com/msyc1990/project-art-gallery.git" target="_blank">Code</a>
+                </div>
+                <div class="project-describe">
+                    <p>
+                        Witryna z prywatną galerią sztuki może być świetnym sposobem na nawiązanie kontaktu z innymi miłośnikami sztuki, dzielenie się swoją pasją do sztuki i zaprezentowanie swojej osobistej kolekcji w sposób, który jest zarówno atrakcyjny, jak i pouczający.
+                    </p>
+                </div>
+                <div class="project-tech">
+                    <h2>Technologie</h2>
+                    <div class="tech-icon">
+                        <img src="/image/icon/html5.svg" alt="html-img">
+                        <img src="/image/icon/css-icon.svg" alt="css-img">
+                        <img src="/image/icon/javascript-svgrepo-com.svg" alt="js-img">
+                    </div>
+                </div>
+            </article>
+            <article class="project-card">
+                <figure class="project-img">
+                    <img src="/image/projects/fs-project.png" alt="Fly-Studio-img">
+                </figure>
+                <div class="project-info">
+                    <h2>Fly-Studio</h2>
+                    <a href="https://github.com/msyc1990/project-fly-studio.git" target="_blank">Code</a>
+                </div>
+                <div class="project-describe">
+                    <p>
+                        Jeśli szukasz nowego, ekscytującego sposobu na poprawę kondycji i zdrowia, zajęcia fitness na rurze i bungee mogą być dla Ciebie idealnym wyborem!
+                    </p>
+                </div>
+                <div class="project-tech">
+                    <h2>Technologie</h2>
+                    <div class="tech-icon">
+                        <img src="/image/icon/html5.svg" alt="html-img">
+                        <img src="/image/icon/css-icon.svg" alt="css-img">
+                        <img src="/image/icon/javascript-svgrepo-com.svg" alt="js-img">
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!--Contact-->
+    <section class="contact">
+        <h1><span class="dec-title">Kon</span>takt</h1>
+        <div class="contact-info">
+            <p>
+                Dziękuję za odwiedzenie mojej strony! Jeśli jesteś zainteresowany współpracą lub po prostu chcesz się ze mną skontaktować, zapraszam do wysłania wiadomości na mój adres e-mail lub zadzwonienia pod numer. Postaram się odpowiedzieć jak najszybciej. Do usłyszenia.
+            </p>
+            <div class="phone">
+                <img src="/image/icon/phone-icon.svg" alt="phone-img" class="i-phone">
+                <span>693-529-383</span>
+            </div>
+            <div class="email">
+                <img src="/image/icon/email-icon.svg" alt="phone-img" class="i-email">
+                <a href="mailto:michal.syc1990@gmail.com">Michał Syc</a>
+            </div>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <p>Copyrights &copy; 2023 | Michał Syc-Portfolio</p>
+    </footer>
+</body>
+</html>
